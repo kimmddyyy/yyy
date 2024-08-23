@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>팝업창</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <script src="js/jquery-3.7.1.min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+
+        
+        .popup{
+            width: 500px;height: 400px;
+            background-color: lightcyan;
+            border-radius: 40px;
+            position: fixed; top: 50%; left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 40px;
+            box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+            background-image: url(img/bolt_100dp_B2A8D3_FILL0_wght400_GRAD0_opsz48.png);
+            background-repeat: no-repeat;
+            background-position:center ;
+            background-size: 80%
+        }
+        
+        h2{
+            font-size: 40px; text-align: center;
+            margin-top: 120px;
+            font-family: "Chakra Petch", sans-serif;
+            letter-spacing: 3px;
+            color: aquamarine;
+            text-shadow: 0 0 15px rebeccapurple;
+        }
+        
+        p{
+            font-size: 1.5em;
+            text-align: center;
+            margin-top: 50px;
+            font-family: "Gugi", sans-serif;
+        
+
+        }
+        
+        .btn{
+            padding: 20px 27px; border-radius: 50%;
+            background: transparent;
+            border: 2px dashed coral;
+            color: lightcoral;
+            font-size: 35px;
+            position:absolute ;top: 40px; right: 40px;
+        
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="popup">
+        <h2>popup welcome~!</h2>
+        <p>비가오니까 조심하세요~</p>
+
+        <!-- <img src="img/bolt_100dp_B2A8D3_FILL0_wght400_GRAD0_opsz48.png" alt="1"> -->
+        <!-- <img src="img/bolt_100dp_B2A8D3_FILL0_wght400_GRAD0_opsz48.svg" alt="2"> -->
+        <span class="material-symbols-outlined">
+            bolt
+            </span>
+        <button class="btn">X</button>
+    </div>
+
+    <script>
+        $(".btn").click(function(){
+            $("popup").hide();
+        });
+    </script>
+
+</body>
+</html>
