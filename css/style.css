@@ -1,0 +1,305 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+ul,
+ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+/* header */
+header {
+	width: 100%;
+    background-color: rgb(4, 125, 181);
+}
+header .inner {
+	width: 1180px;
+	height: 120px;
+    /* background-color: rgb(122, 181, 245); */
+	margin: 0px auto;
+	position: relative; /*자식 absolute 요소의 기준점 설정*/
+}
+header .inner h1 {
+	position: absolute;
+	left: 0px;
+	bottom: 15px;
+}
+header .inner h1 a {
+	font: bold 24px/1 "arial";
+	color: #444;
+}
+header .inner .util {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+}
+header .inner .util li {
+	float: left;
+}
+header .inner .util li a {
+	display: block;
+	font: 12px/1 "arial";
+	color: #ffffff;
+	padding: 0px 10px;
+}
+header .inner #gnb {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+header .inner #gnb li {
+	float: left;
+}
+header .inner #gnb li a {
+	display: block; /*인라인 요소는 block설정하여 크기를 조절가능*/
+	font: bold 20px/1 "arial";
+	color: #ffffff;
+	padding: 30px 40px;
+	transition: all 0.5s;
+}
+header .inner #gnb li a:hover {
+	background: #b2d1f9;
+	color: #fff;
+}
+
+figure {
+	width: 100%;
+	height: 2000px; /*전체 브라우저 높이에서 120px만큼 빼줌*/
+	background: #b6b5b5;
+	position: relative;
+	overflow: hidden;
+	padding-top: 250px;
+}
+figure img {
+	object-fit: cover; /*영상을 figure안쪽에 꽉 차도록 설정*/
+	width: 100%;
+	height: 2000px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+figure .inner {
+	width: 1180px;
+	margin: 30px auto;
+	position: relative;
+}
+figure .inner h1 {
+	font: normal 300px/1;
+	color: #fff;
+	margin-bottom: 20px;
+	text-align: center;
+		font-family: "Titillium Web", sans-serif;
+		font-style: normal; }
+
+figure .inner p {
+	font: 30px/1.4 "arial";
+	color: #ffffff;
+	margin-bottom: 60px;
+	text-align: center;
+		font-family: "IBM Plex Sans KR", sans-serif;
+		font-weight: 400;
+		font-style: normal;
+}
+figure .inner a {
+	display: block;
+	width: 300px;
+	height: 300px;
+	border: 1px solid #ffffff;
+	font: bold 30px;
+	color: #fff;
+	text-align: center;
+	letter-spacing: 1px;
+	transition: all 0.5s;
+}
+figure .inner a:hover {
+	background: #fff;
+	color: #555;
+}
+figure .fish1 {
+	position: absolute;
+	right: 300px; top: 200px;
+	width: 500px; height: 400px;
+	/* border: 1px solid; */
+	animation: move 1s linear infinite alternate;
+}
+figure .fish1 img {
+	width: 500px; height: 300px;
+}
+
+figure .fish2{
+	position: absolute;
+	left: 300px; top: 500px;
+	width: 650px;
+	animation: bounce 2s linear infinite alternate;
+}
+
+figure .fish2 img{
+	height: 500px;
+	/* width: 100%; */
+	/* width: 500px; height: 300px; */
+	/* object-fit: cover; */
+}
+
+@keyframes move {
+	0% {
+		position: absolute;
+		right: 300px; top: 200px;
+	}
+	0% {
+		position: absolute;
+		right: 300px; top: 0px;
+	}
+
+	/* 100% {
+		position: absolute;
+		right: 300px; top: 200px;
+	} */
+}
+
+
+@keyframes bounce {
+	0% {
+		position: absolute;
+		left: 300px; top: 500px;
+	}
+	0% {
+		position: absolute;
+		left:300px; top: 0px;
+	}
+}
+
+figure section {
+	width: 1200px; height: 400px;
+	/* border: solid 1px red; */
+	position: absolute;
+	bottom: 200px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+figure section .wrap {
+	display: flex;
+	justify-content: space-around;
+}
+
+figure section article {
+	flex: 0 0 40%;
+	height: 300px;
+	border: 1px solid;
+}
+
+figure section h2{
+	display: block;
+	color: #dfeeff;
+	text-align: center;
+}
+
+
+.wrap  img{
+	height: 300px;
+	position: relative;
+
+}
+
+
+
+/* .main .sub div h2{
+	width: 500px;
+	height: 400px;
+	background-color: #ffffff;
+	margin-top: 100px;
+} */
+
+
+
+/* .wrap{
+	width: 500px;
+	height: 500px;
+	margin: 0 auto;
+	border: 1px solid;
+	background-color: #b2d1f9;
+}
+.main{
+	width: 100%;
+	height: 200px;
+}
+
+.sub{
+	width: 270px;
+	height: 200px;
+}
+
+.wrap2{
+	width: 500px;
+	height: 500px;
+	border: 1px solid;
+}
+.main2{
+	width: 100%;
+	height: 200px;
+} */
+
+/* footer */
+footer {
+	width: 100%; height: 400px;
+	background: #226ec0;
+	padding: 100px 20px;
+}
+footer .inner {
+	width: 1180px;
+	margin: 0px auto;
+}
+
+footer .inner .upper {
+	width: 100%;
+	border-bottom: 1px solid #ffffff;
+	padding-bottom: 20px;
+}
+footer .inner .upper::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+footer .inner .upper h1 {
+	float: left;
+	font: bold 24px/1 "arial";
+	color: #666666;
+}
+footer .inner .upper ul {
+	float: right;
+}
+footer .inner .upper ul li {
+	float: left;
+	margin-left: 20px;
+}
+footer .inner .upper ul li a {
+	font: bold 14px/1 "arial";
+	color: #ffffff;
+}
+footer .inner .lower {
+	width: 100%;
+	padding-top: 20px;
+}
+footer .inner .lower address {
+	width: 100%;
+	font: 16px/1.3 "arial";
+	color: #ffffff;
+	margin-bottom: 20px;
+    /* text-align: center; */
+}
+footer .inner .lower p {
+	width: 100%;
+	font: 12px/1 "arial";
+	color: #ffffff;
+}
+
+
+
+
+
+
+
